@@ -336,7 +336,10 @@ void initialisation (void) {
 	// TODO 
 	// Création des trois FBOs pour cartes d'ombres:
     // Utilisez CCst::tailleShadowMap
-	
+	for (int i = 0; i < 3; i++) {
+		shadowMaps[i] = new CFBO();
+		shadowMaps[i]->Init(CCst::tailleShadowMap, CCst::tailleShadowMap);
+	}
 
 	construireMatricesProjectivesEclairage();
 
@@ -420,6 +423,7 @@ void construireMatricesProjectivesEclairage(void)
 	// position = position lumière
 	// point visé : centre de l'objet (on triche avec la lumière ponctuelle)
 	// fov = Assez pour voir completement le moèdle (~90 est OK).
+	
 
 
 	/// LUM1 : SPOT : sauvegarder dans lightVP[1]

@@ -224,7 +224,7 @@ void CFBO::TerminerCapture()
 {
 	// TODO: 
 	// Remettre OpenGL dans l'état par défaut
-	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glViewport(0, 0, m_TextureW, m_TextureH);
 }
